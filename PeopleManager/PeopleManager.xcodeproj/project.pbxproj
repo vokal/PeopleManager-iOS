@@ -314,7 +314,6 @@
 				92F50AAA1BB4429000199103 /* Sources */,
 				92F50AAB1BB4429000199103 /* Frameworks */,
 				92F50AAC1BB4429000199103 /* Resources */,
-				92F50AAD1BB4429000199103 /* Version Incrementing Run Script */,
 				92F50AAE1BB4429000199103 /* Objective-Clean Run Script */,
 				92F50AAF1BB4429000199103 /* Export Env Run Script */,
 				5220B984AFA4AD3DB223A4E7 /* Copy Pods Resources */,
@@ -499,20 +498,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleManagerTests/Pods-PeopleManagerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		92F50AAD1BB4429000199103 /* Version Incrementing Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Version Incrementing Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Update build number with number of git commits\n\t\t\tbuildNumber=$(git rev-list HEAD --count)\n\t\t\techo \"Updating build number to $buildNumber\"\n\t\t\t/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n\t\t\t/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"";
 		};
 		92F50AAE1BB4429000199103 /* Objective-Clean Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
