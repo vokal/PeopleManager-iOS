@@ -10,6 +10,15 @@
 		0326AC228142EA39FD582F72 /* libPods-PeopleManagerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C18FDC7B9A72ED4620B13E /* libPods-PeopleManagerUITests.a */; };
 		7EA37C1BA3A659D45C01FBB9 /* libPods-PeopleManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EBF9829A671A06E584F345 /* libPods-PeopleManagerTests.a */; };
 		8F1A6AF428EB41E675FFC028 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A5ACC7A6ED91E78990A438 /* libPods.a */; };
+		92EA642F1BB4455D00DE670D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA642E1BB4455D00DE670D /* CoreLocation.framework */; };
+		92EA64331BB4458400DE670D /* HDBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EA64321BB4458400DE670D /* HDBeaconManager.m */; settings = {ASSET_TAGS = (); }; };
+		92EA64361BB4499900DE670D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA64351BB4499900DE670D /* CloudKit.framework */; };
+		92EA64381BB44F6400DE670D /* Gimbal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA64371BB44F6400DE670D /* Gimbal.framework */; settings = {ASSET_TAGS = (); }; };
+		92EA643B1BB4511900DE670D /* HDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EA643A1BB4511900DE670D /* HDMainViewController.m */; settings = {ASSET_TAGS = (); }; };
+		92EA643D1BB4522900DE670D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA643C1BB4522900DE670D /* libz.tbd */; };
+		92EA64421BB45D0100DE670D /* Cash Register.caf in Resources */ = {isa = PBXBuildFile; fileRef = 92EA643F1BB45D0100DE670D /* Cash Register.caf */; settings = {ASSET_TAGS = (); }; };
+		92EA64431BB45D0100DE670D /* Rooster.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 92EA64401BB45D0100DE670D /* Rooster.m4a */; settings = {ASSET_TAGS = (); }; };
+		92EA64471BB45D5400DE670D /* HDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EA64461BB45D5400DE670D /* HDConstants.m */; settings = {ASSET_TAGS = (); }; };
 		92F50AB51BB4429000199103 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F50AB41BB4429000199103 /* main.m */; };
 		92F50AB81BB4429000199103 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F50AB71BB4429000199103 /* AppDelegate.m */; };
 		92F50AC41BB4429000199103 /* remove-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 92F50AC31BB4429000199103 /* remove-key.sh */; };
@@ -51,6 +60,19 @@
 		78BA88419EED535A18D102B4 /* Pods-PeopleManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleManagerTests/Pods-PeopleManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8BEE5C7AF881EC6190879C55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		918336BD61912027B97A67E7 /* Pods-PeopleManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleManagerUITests/Pods-PeopleManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		92EA642E1BB4455D00DE670D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		92EA64311BB4458400DE670D /* HDBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDBeaconManager.h; sourceTree = "<group>"; };
+		92EA64321BB4458400DE670D /* HDBeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDBeaconManager.m; sourceTree = "<group>"; };
+		92EA64341BB4498A00DE670D /* PeopleManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PeopleManager.entitlements; sourceTree = "<group>"; };
+		92EA64351BB4499900DE670D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		92EA64371BB44F6400DE670D /* Gimbal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gimbal.framework; path = PeopleManager/Frameworks/Gimbal.framework; sourceTree = "<group>"; };
+		92EA64391BB4511900DE670D /* HDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDMainViewController.h; sourceTree = "<group>"; };
+		92EA643A1BB4511900DE670D /* HDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDMainViewController.m; sourceTree = "<group>"; };
+		92EA643C1BB4522900DE670D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		92EA643F1BB45D0100DE670D /* Cash Register.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cash Register.caf"; sourceTree = "<group>"; };
+		92EA64401BB45D0100DE670D /* Rooster.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rooster.m4a; sourceTree = "<group>"; };
+		92EA64451BB45D5400DE670D /* HDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDConstants.h; sourceTree = "<group>"; };
+		92EA64461BB45D5400DE670D /* HDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDConstants.m; sourceTree = "<group>"; };
 		92F50AB11BB4429000199103 /* PeopleManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F50AB41BB4429000199103 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92F50AB61BB4429000199103 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,6 +114,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EA643D1BB4522900DE670D /* libz.tbd in Frameworks */,
+				92EA64381BB44F6400DE670D /* Gimbal.framework in Frameworks */,
+				92EA64361BB4499900DE670D /* CloudKit.framework in Frameworks */,
+				92EA642F1BB4455D00DE670D /* CoreLocation.framework in Frameworks */,
 				8F1A6AF428EB41E675FFC028 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,11 +164,49 @@
 		6CF613F5F774183753F65E28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92EA643C1BB4522900DE670D /* libz.tbd */,
+				92EA64371BB44F6400DE670D /* Gimbal.framework */,
+				92EA64351BB4499900DE670D /* CloudKit.framework */,
+				92EA642E1BB4455D00DE670D /* CoreLocation.framework */,
 				D8A5ACC7A6ED91E78990A438 /* libPods.a */,
 				17EBF9829A671A06E584F345 /* libPods-PeopleManagerTests.a */,
 				F8C18FDC7B9A72ED4620B13E /* libPods-PeopleManagerUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92EA64301BB4457800DE670D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				92EA64311BB4458400DE670D /* HDBeaconManager.h */,
+				92EA64321BB4458400DE670D /* HDBeaconManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		92EA643E1BB45D0100DE670D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				92EA643F1BB45D0100DE670D /* Cash Register.caf */,
+				92EA64401BB45D0100DE670D /* Rooster.m4a */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		92EA64411BB45D0100DE670D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		92EA64441BB45D4000DE670D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				92EA64451BB45D5400DE670D /* HDConstants.h */,
+				92EA64461BB45D5400DE670D /* HDConstants.m */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		92F50AA51BB4429000199103 = {
@@ -172,6 +236,9 @@
 		92F50AB31BB4429000199103 /* PeopleManager */ = {
 			isa = PBXGroup;
 			children = (
+				92EA64441BB45D4000DE670D /* Utilities */,
+				92EA64341BB4498A00DE670D /* PeopleManager.entitlements */,
+				92EA64301BB4457800DE670D /* Managers */,
 				92F50AB41BB4429000199103 /* main.m */,
 				92F50AB61BB4429000199103 /* AppDelegate.h */,
 				92F50AB71BB4429000199103 /* AppDelegate.m */,
@@ -237,6 +304,8 @@
 		92F50ACA1BB4429000199103 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				92EA643E1BB45D0100DE670D /* Sounds */,
+				92EA64411BB45D0100DE670D /* Images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -265,6 +334,8 @@
 		92F50ACE1BB4429000199103 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				92EA64391BB4511900DE670D /* HDMainViewController.h */,
+				92EA643A1BB4511900DE670D /* HDMainViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -397,6 +468,18 @@
 				TargetAttributes = {
 					92F50AB01BB4429000199103 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 8395LCW35P;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					92F50ADD1BB4429000199103 = {
 						CreatedOnToolsVersion = 7.0;
@@ -439,6 +522,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F50AC41BB4429000199103 /* remove-key.sh in Resources */,
+				92EA64431BB45D0100DE670D /* Rooster.m4a in Resources */,
+				92EA64421BB45D0100DE670D /* Cash Register.caf in Resources */,
 				92F50AD81BB4429000199103 /* LaunchScreen.storyboard in Resources */,
 				92F50AD51BB4429000199103 /* Assets.xcassets in Resources */,
 				92F50AD31BB4429000199103 /* Main.storyboard in Resources */,
@@ -595,6 +680,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F50AB81BB4429000199103 /* AppDelegate.m in Sources */,
+				92EA64471BB45D5400DE670D /* HDConstants.m in Sources */,
+				92EA643B1BB4511900DE670D /* HDMainViewController.m in Sources */,
+				92EA64331BB4458400DE670D /* HDBeaconManager.m in Sources */,
 				92F50AB51BB4429000199103 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -752,12 +840,20 @@
 			baseConfigurationReference = 8BEE5C7AF881EC6190879C55 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PeopleManager/PeopleManager.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PeopleManager/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PeopleManager/Prefix.pch;
 				INFOPLIST_FILE = PeopleManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vokalinteractive.PeopleManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vokal.peoplemanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -766,12 +862,20 @@
 			baseConfigurationReference = A2DE5EB62C99755B940EBF07 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PeopleManager/PeopleManager.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PeopleManager/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PeopleManager/Prefix.pch;
 				INFOPLIST_FILE = PeopleManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vokalinteractive.PeopleManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vokal.peoplemanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
