@@ -1,0 +1,14 @@
+//
+// Prefix header for all source files in the 'PeopleManager-iOS' project
+//
+#ifndef HDPrefix_pch
+#define HDPrefix_pch
+
+#ifdef DEBUG
+#    define DLog(...) NSLog(@"%s:%d %@", __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__]);
+#else
+#    define DLog(...) do {} while (NO)
+#endif
+
+#endif
+

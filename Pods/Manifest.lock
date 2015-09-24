@@ -1,0 +1,24 @@
+PODS:
+  - ILGHttpConstants (1.0.1)
+  - KIF (3.3.0):
+    - KIF/Core (= 3.3.0)
+  - KIF/Core (3.3.0)
+  - VOKBenkode (0.2.1)
+  - VOKMockUrlProtocol (2.0.3):
+    - ILGHttpConstants (~> 1.0.0)
+    - VOKBenkode (~> 0.2.1)
+  - XcodeCoverage (1.2.2)
+
+DEPENDENCIES:
+  - KIF
+  - VOKMockUrlProtocol
+  - XcodeCoverage (~> 1.2)
+
+SPEC CHECKSUMS:
+  ILGHttpConstants: 715aca4c2b260527059242c0088abc748b52f98e
+  KIF: 0a82046d06f3648799cac522d2d0f7934214caac
+  VOKBenkode: 7f17656dbb496b472c12913d1a8b8bc15b43d0bd
+  VOKMockUrlProtocol: 7c310fc61974074cb1bb09612ae5da71d96f978c
+  XcodeCoverage: 46ab36f35da908cf70498a34610c95d24230303a
+
+COCOAPODS: 0.38.2
