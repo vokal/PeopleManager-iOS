@@ -84,11 +84,6 @@
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
     NSLog(@"didReceiveLocalNotification = %@", notification);
-//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Local Notification"
-//                                                                   message:notification
-//                                                            preferredStyle:UIAlertControllerStyleAlert];
-//    
-//    UIAlertAction *action = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:nil];
     
 }
 

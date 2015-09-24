@@ -16,7 +16,7 @@
 @property (nonatomic, strong) HDBeaconManager *beaconManager;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) IBOutlet UILabel *labelLadderRoom;
-@property (strong, nonatomic) IBOutlet UILabel *labelChalkRoom;
+@property (strong, nonatomic) IBOutlet UILabel *labelReception;
 
 @end
 
@@ -32,7 +32,7 @@
     self.dateFormatter.timeStyle = NSDateFormatterMediumStyle;
     self.dateFormatter.dateStyle = NSDateFormatterMediumStyle;
     self.labelLadderRoom.text = @"";
-    self.labelChalkRoom.text = @"";
+    self.labelReception.text = @"";
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -60,10 +60,9 @@
 {
     NSString *name = beaconSighting.beacon.name;
     if ([name isEqualToString:BEACON_LADDER_ROOM]) {
-        self.labelLadderRoom.text = [NSString stringWithFormat:@"Ladder power : %ld",beaconSighting.RSSI];
-    }
-    else {
-        self.labelChalkRoom.text = [NSString stringWithFormat:@"Chalk power : %ld",beaconSighting.RSSI];
+        self.labelLadderRoom.text = [NSString stringWithFormat:@"Ladder : %ld", beaconSighting.RSSI];
+    } else {
+        self.labelReception.text = [NSString stringWithFormat:@"Reception : %ld", beaconSighting.RSSI];
     }
 }
 
