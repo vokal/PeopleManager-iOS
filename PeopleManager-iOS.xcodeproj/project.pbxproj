@@ -1,0 +1,928 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4FCFD57E5D8BFFCFF127AEA0 /* libPods-PeopleManager-iOSUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 354022144D0F8EB4298CEAA1 /* libPods-PeopleManager-iOSUITests.a */; };
+		92AD64941BB43824009BBE92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD64931BB43824009BBE92 /* main.m */; };
+		92AD64971BB43824009BBE92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD64961BB43824009BBE92 /* AppDelegate.m */; };
+		92AD64A31BB43824009BBE92 /* remove-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 92AD64A21BB43824009BBE92 /* remove-key.sh */; };
+		92AD64B21BB43824009BBE92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AD64B01BB43824009BBE92 /* Main.storyboard */; };
+		92AD64B41BB43824009BBE92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92AD64B31BB43824009BBE92 /* Assets.xcassets */; };
+		92AD64B71BB43824009BBE92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AD64B51BB43824009BBE92 /* LaunchScreen.storyboard */; };
+		92AD64C21BB43824009BBE92 /* PeopleManager_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD64C11BB43824009BBE92 /* PeopleManager_iOSTests.m */; };
+		92AD64CD1BB43824009BBE92 /* PeopleManager_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD64CC1BB43824009BBE92 /* PeopleManager_iOSUITests.m */; };
+		92AD64D81BB43824009BBE92 /* PeopleManager_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD64D71BB43824009BBE92 /* PeopleManager_iOSUITests.m */; };
+		D1CAA00EFD7B21A1C6F91DB4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B63F5490C3153376E4741 /* libPods.a */; };
+		E366723D85906657E4C94275 /* libPods-PeopleManager-iOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0207280C1FC049CE06528345 /* libPods-PeopleManager-iOSTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92AD64BE1BB43824009BBE92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92AD64851BB43824009BBE92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92AD648F1BB43824009BBE92;
+			remoteInfo = "PeopleManager-iOS";
+		};
+		92AD64C91BB43824009BBE92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92AD64851BB43824009BBE92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92AD648F1BB43824009BBE92;
+			remoteInfo = "PeopleManager-iOS";
+		};
+		92AD64D41BB43824009BBE92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92AD64851BB43824009BBE92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92AD648F1BB43824009BBE92;
+			remoteInfo = "PeopleManager-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0207280C1FC049CE06528345 /* libPods-PeopleManager-iOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeopleManager-iOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1783D2C3AA27C1D3053749B9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		31B8E54D3B39A51B238AF7E1 /* Pods-PeopleManager-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleManager-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleManager-iOSUITests/Pods-PeopleManager-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		354022144D0F8EB4298CEAA1 /* libPods-PeopleManager-iOSUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeopleManager-iOSUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B719BC7B193DBC93A71ABAB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		443B10A609EB9FDA7BC38CF8 /* Pods-PeopleManager-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleManager-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleManager-iOSTests/Pods-PeopleManager-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		92AD64901BB43824009BBE92 /* PeopleManager-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeopleManager-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AD64931BB43824009BBE92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92AD64951BB43824009BBE92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		92AD64961BB43824009BBE92 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		92AD64991BB43824009BBE92 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		92AD649A1BB43824009BBE92 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		92AD649B1BB43824009BBE92 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		92AD649D1BB43824009BBE92 /* add-key.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "add-key.sh"; sourceTree = "<group>"; };
+		92AD649E1BB43824009BBE92 /* Apple Worldwide Developer Relations Certification Authority.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apple Worldwide Developer Relations Certification Authority.cer"; sourceTree = "<group>"; };
+		92AD649F1BB43824009BBE92 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		92AD64A01BB43824009BBE92 /* codecov.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = codecov.sh; sourceTree = "<group>"; };
+		92AD64A11BB43824009BBE92 /* distribute.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = distribute.sh; sourceTree = "<group>"; };
+		92AD64A21BB43824009BBE92 /* remove-key.sh */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "remove-key.sh"; sourceTree = "<group>"; };
+		92AD64A41BB43824009BBE92 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		92AD64A51BB43824009BBE92 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; };
+		92AD64A71BB43824009BBE92 /* VokalObjCleanStyleSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = VokalObjCleanStyleSettings.plist; path = ../VokalObjCleanStyleSettings.plist; sourceTree = "<group>"; };
+		92AD64AF1BB43824009BBE92 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		92AD64B11BB43824009BBE92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92AD64B31BB43824009BBE92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92AD64B61BB43824009BBE92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92AD64B81BB43824009BBE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92AD64BD1BB43824009BBE92 /* PeopleManager-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PeopleManager-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AD64C11BB43824009BBE92 /* PeopleManager_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleManager_iOSTests.m; sourceTree = "<group>"; };
+		92AD64C31BB43824009BBE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92AD64C81BB43824009BBE92 /* PeopleManager-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PeopleManager-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AD64CC1BB43824009BBE92 /* PeopleManager_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleManager_iOSUITests.m; sourceTree = "<group>"; };
+		92AD64CE1BB43824009BBE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92AD64D31BB43824009BBE92 /* PeopleManager-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PeopleManager-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AD64D71BB43824009BBE92 /* PeopleManager_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleManager_iOSUITests.m; sourceTree = "<group>"; };
+		92AD64D91BB43824009BBE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5EFF4B1B2B8703E57ADBE9D /* Pods-PeopleManager-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleManager-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleManager-iOSTests/Pods-PeopleManager-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		EA6B63F5490C3153376E4741 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F327924C9291878AF7C6BD9F /* Pods-PeopleManager-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleManager-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleManager-iOSUITests/Pods-PeopleManager-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92AD648A1BB43824009BBE92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1CAA00EFD7B21A1C6F91DB4 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AD64BA1BB43824009BBE92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E366723D85906657E4C94275 /* libPods-PeopleManager-iOSTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AD64C51BB43824009BBE92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FCFD57E5D8BFFCFF127AEA0 /* libPods-PeopleManager-iOSUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AD64D01BB43824009BBE92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54061F978A14AA9AFAA56E64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B63F5490C3153376E4741 /* libPods.a */,
+				0207280C1FC049CE06528345 /* libPods-PeopleManager-iOSTests.a */,
+				354022144D0F8EB4298CEAA1 /* libPods-PeopleManager-iOSUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86BA1BD45FF58C793ACA1E8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B719BC7B193DBC93A71ABAB /* Pods.debug.xcconfig */,
+				1783D2C3AA27C1D3053749B9 /* Pods.release.xcconfig */,
+				443B10A609EB9FDA7BC38CF8 /* Pods-PeopleManager-iOSTests.debug.xcconfig */,
+				A5EFF4B1B2B8703E57ADBE9D /* Pods-PeopleManager-iOSTests.release.xcconfig */,
+				F327924C9291878AF7C6BD9F /* Pods-PeopleManager-iOSUITests.debug.xcconfig */,
+				31B8E54D3B39A51B238AF7E1 /* Pods-PeopleManager-iOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92AD64841BB43824009BBE92 = {
+			isa = PBXGroup;
+			children = (
+				92AD64921BB43824009BBE92 /* PeopleManager-iOS */,
+				92AD64C01BB43824009BBE92 /* PeopleManager-iOSTests */,
+				92AD64CB1BB43824009BBE92 /* PeopleManager-iOSUITests */,
+				92AD64D61BB43824009BBE92 /* PeopleManager-iOSUITests */,
+				92AD64911BB43824009BBE92 /* Products */,
+				86BA1BD45FF58C793ACA1E8F /* Pods */,
+				54061F978A14AA9AFAA56E64 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		92AD64911BB43824009BBE92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92AD64901BB43824009BBE92 /* PeopleManager-iOS.app */,
+				92AD64BD1BB43824009BBE92 /* PeopleManager-iOSTests.xctest */,
+				92AD64C81BB43824009BBE92 /* PeopleManager-iOSUITests.xctest */,
+				92AD64D31BB43824009BBE92 /* PeopleManager-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92AD64921BB43824009BBE92 /* PeopleManager-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				92AD64931BB43824009BBE92 /* main.m */,
+				92AD64951BB43824009BBE92 /* AppDelegate.h */,
+				92AD64961BB43824009BBE92 /* AppDelegate.m */,
+				92AD64B01BB43824009BBE92 /* Main.storyboard */,
+				92AD64B31BB43824009BBE92 /* Assets.xcassets */,
+				92AD64B51BB43824009BBE92 /* LaunchScreen.storyboard */,
+				92AD64B81BB43824009BBE92 /* Info.plist */,
+				92AD64AE1BB43824009BBE92 /* Views */,
+				92AD64AD1BB43824009BBE92 /* View Controllers */,
+				92AD64AC1BB43824009BBE92 /* Controls */,
+				92AD64AB1BB43824009BBE92 /* Data Sources */,
+				92AD64AA1BB43824009BBE92 /* Categories */,
+				92AD64A91BB43824009BBE92 /* Resources */,
+				92AD64A81BB43824009BBE92 /* Storyboards */,
+				92AD64981BB43824009BBE92 /* Non-iOS Resources */,
+				92AD64A61BB43824009BBE92 /* Supporting Files */,
+			);
+			path = "PeopleManager-iOS";
+			sourceTree = "<group>";
+		};
+		92AD64981BB43824009BBE92 /* Non-iOS Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92AD64991BB43824009BBE92 /* .gitignore */,
+				92AD649A1BB43824009BBE92 /* .travis.yml */,
+				92AD649B1BB43824009BBE92 /* README.md */,
+				92AD64A41BB43824009BBE92 /* Podfile */,
+				92AD64A51BB43824009BBE92 /* Gemfile */,
+				92AD649C1BB43824009BBE92 /* travis */,
+			);
+			name = "Non-iOS Resources";
+			sourceTree = "<group>";
+		};
+		92AD649C1BB43824009BBE92 /* travis */ = {
+			isa = PBXGroup;
+			children = (
+				92AD649D1BB43824009BBE92 /* add-key.sh */,
+				92AD649E1BB43824009BBE92 /* Apple Worldwide Developer Relations Certification Authority.cer */,
+				92AD649F1BB43824009BBE92 /* build.sh */,
+				92AD64A01BB43824009BBE92 /* codecov.sh */,
+				92AD64A11BB43824009BBE92 /* distribute.sh */,
+				92AD64A21BB43824009BBE92 /* remove-key.sh */,
+			);
+			path = travis;
+			sourceTree = SOURCE_ROOT;
+		};
+		92AD64A61BB43824009BBE92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92AD64A71BB43824009BBE92 /* VokalObjCleanStyleSettings.plist */,
+				92AD64AF1BB43824009BBE92 /* Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92AD64A81BB43824009BBE92 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		92AD64A91BB43824009BBE92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92AD64AA1BB43824009BBE92 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		92AD64AB1BB43824009BBE92 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
+		92AD64AC1BB43824009BBE92 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		92AD64AD1BB43824009BBE92 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		92AD64AE1BB43824009BBE92 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		92AD64C01BB43824009BBE92 /* PeopleManager-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				92AD64C11BB43824009BBE92 /* PeopleManager_iOSTests.m */,
+				92AD64C31BB43824009BBE92 /* Info.plist */,
+			);
+			path = "PeopleManager-iOSTests";
+			sourceTree = "<group>";
+		};
+		92AD64CB1BB43824009BBE92 /* PeopleManager-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92AD64CC1BB43824009BBE92 /* PeopleManager_iOSUITests.m */,
+				92AD64CE1BB43824009BBE92 /* Info.plist */,
+			);
+			path = "PeopleManager-iOSUITests";
+			sourceTree = "<group>";
+		};
+		92AD64D61BB43824009BBE92 /* PeopleManager-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92AD64D71BB43824009BBE92 /* PeopleManager_iOSUITests.m */,
+				92AD64D91BB43824009BBE92 /* Info.plist */,
+			);
+			path = "PeopleManager-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92AD648F1BB43824009BBE92 /* PeopleManager-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92AD64DC1BB43824009BBE92 /* Build configuration list for PBXNativeTarget "PeopleManager-iOS" */;
+			buildPhases = (
+				11FAFCCCB5CFFD5923A008B7 /* Check Pods Manifest.lock */,
+				92AD64891BB43824009BBE92 /* Sources */,
+				92AD648A1BB43824009BBE92 /* Frameworks */,
+				92AD648B1BB43824009BBE92 /* Resources */,
+				92AD648C1BB43824009BBE92 /* Version Incrementing Run Script */,
+				92AD648D1BB43824009BBE92 /* Objective-Clean Run Script */,
+				92AD648E1BB43824009BBE92 /* Export Env Run Script */,
+				BE987F3E6BA1D8BC12EC09FC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PeopleManager-iOS";
+			productName = "PeopleManager-iOS";
+			productReference = 92AD64901BB43824009BBE92 /* PeopleManager-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92AD64BC1BB43824009BBE92 /* PeopleManager-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92AD64DF1BB43824009BBE92 /* Build configuration list for PBXNativeTarget "PeopleManager-iOSTests" */;
+			buildPhases = (
+				99AA713E7A20930FDC31D3D5 /* Check Pods Manifest.lock */,
+				92AD64B91BB43824009BBE92 /* Sources */,
+				92AD64BA1BB43824009BBE92 /* Frameworks */,
+				92AD64BB1BB43824009BBE92 /* Resources */,
+				9043007FA00028785791FBC8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92AD64BF1BB43824009BBE92 /* PBXTargetDependency */,
+			);
+			name = "PeopleManager-iOSTests";
+			productName = "PeopleManager-iOSTests";
+			productReference = 92AD64BD1BB43824009BBE92 /* PeopleManager-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92AD64C71BB43824009BBE92 /* PeopleManager-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92AD64E21BB43824009BBE92 /* Build configuration list for PBXNativeTarget "PeopleManager-iOSUITests" */;
+			buildPhases = (
+				6ED74D062A94608C8196F5FB /* Check Pods Manifest.lock */,
+				92AD64C41BB43824009BBE92 /* Sources */,
+				92AD64C51BB43824009BBE92 /* Frameworks */,
+				92AD64C61BB43824009BBE92 /* Resources */,
+				485C268D1A42B30D3AFC4C80 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92AD64CA1BB43824009BBE92 /* PBXTargetDependency */,
+			);
+			name = "PeopleManager-iOSUITests";
+			productName = "PeopleManager-iOSUITests";
+			productReference = 92AD64C81BB43824009BBE92 /* PeopleManager-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		92AD64D21BB43824009BBE92 /* PeopleManager-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92AD64E51BB43824009BBE92 /* Build configuration list for PBXNativeTarget "PeopleManager-iOSUITests" */;
+			buildPhases = (
+				92AD64CF1BB43824009BBE92 /* Sources */,
+				92AD64D01BB43824009BBE92 /* Frameworks */,
+				92AD64D11BB43824009BBE92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92AD64D51BB43824009BBE92 /* PBXTargetDependency */,
+			);
+			name = "PeopleManager-iOSUITests";
+			productName = "PeopleManager-iOSUITests";
+			productReference = 92AD64D31BB43824009BBE92 /* PeopleManager-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92AD64851BB43824009BBE92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HD;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = vokal;
+				TargetAttributes = {
+					92AD648F1BB43824009BBE92 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					92AD64BC1BB43824009BBE92 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 92AD648F1BB43824009BBE92;
+					};
+					92AD64C71BB43824009BBE92 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 92AD648F1BB43824009BBE92;
+					};
+					92AD64D21BB43824009BBE92 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 92AD648F1BB43824009BBE92;
+					};
+				};
+			};
+			buildConfigurationList = 92AD64881BB43824009BBE92 /* Build configuration list for PBXProject "PeopleManager-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92AD64841BB43824009BBE92;
+			productRefGroup = 92AD64911BB43824009BBE92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92AD648F1BB43824009BBE92 /* PeopleManager-iOS */,
+				92AD64BC1BB43824009BBE92 /* PeopleManager-iOSTests */,
+				92AD64C71BB43824009BBE92 /* PeopleManager-iOSUITests */,
+				92AD64D21BB43824009BBE92 /* PeopleManager-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92AD648B1BB43824009BBE92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AD64A31BB43824009BBE92 /* remove-key.sh in Resources */,
+				92AD64B71BB43824009BBE92 /* LaunchScreen.storyboard in Resources */,
+				92AD64B41BB43824009BBE92 /* Assets.xcassets in Resources */,
+				92AD64B21BB43824009BBE92 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AD64BB1BB43824009BBE92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AD64C61BB43824009BBE92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AD64D11BB43824009BBE92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11FAFCCCB5CFFD5923A008B7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		485C268D1A42B30D3AFC4C80 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleManager-iOSUITests/Pods-PeopleManager-iOSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ED74D062A94608C8196F5FB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9043007FA00028785791FBC8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleManager-iOSTests/Pods-PeopleManager-iOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92AD648C1BB43824009BBE92 /* Version Incrementing Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Version Incrementing Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Update build number with number of git commits\n\t\t\tbuildNumber=$(git rev-list HEAD --count)\n\t\t\techo \"Updating build number to $buildNumber\"\n\t\t\t/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n\t\t\t/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"";
+		};
+		92AD648D1BB43824009BBE92 /* Objective-Clean Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Objective-Clean Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "if [[ ${CI} == 'true' && ${TRAVIS} == 'true' ]]; then\necho \"Objective-Clean will not be executed on Travis\"\nexit 0\nfi\nif [[ -z ${SKIP_OBJCLEAN} || ${SKIP_OBJCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Objective-Clean.app\" ]]; then\n\"${LOCAL_APPS_DIR}\"/Objective-Clean.app/Contents/Resources/ObjClean.app/Contents/MacOS/ObjClean \"${SRCROOT}\"\nelse\necho \"error: You have to install and set up Objective-Clean to use its features!\"\nexit 1\nfi\nfi";
+		};
+		92AD648E1BB43824009BBE92 /* Export Env Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Export Env Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = Pods/XcodeCoverage/exportenv.sh;
+		};
+		99AA713E7A20930FDC31D3D5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE987F3E6BA1D8BC12EC09FC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92AD64891BB43824009BBE92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AD64971BB43824009BBE92 /* AppDelegate.m in Sources */,
+				92AD64941BB43824009BBE92 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AD64B91BB43824009BBE92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AD64C21BB43824009BBE92 /* PeopleManager_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AD64C41BB43824009BBE92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AD64CD1BB43824009BBE92 /* PeopleManager_iOSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AD64CF1BB43824009BBE92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AD64D81BB43824009BBE92 /* PeopleManager_iOSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92AD64BF1BB43824009BBE92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92AD648F1BB43824009BBE92 /* PeopleManager-iOS */;
+			targetProxy = 92AD64BE1BB43824009BBE92 /* PBXContainerItemProxy */;
+		};
+		92AD64CA1BB43824009BBE92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92AD648F1BB43824009BBE92 /* PeopleManager-iOS */;
+			targetProxy = 92AD64C91BB43824009BBE92 /* PBXContainerItemProxy */;
+		};
+		92AD64D51BB43824009BBE92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92AD648F1BB43824009BBE92 /* PeopleManager-iOS */;
+			targetProxy = 92AD64D41BB43824009BBE92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92AD64B01BB43824009BBE92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92AD64B11BB43824009BBE92 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92AD64B51BB43824009BBE92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92AD64B61BB43824009BBE92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92AD64DA1BB43824009BBE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92AD64DB1BB43824009BBE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92AD64DD1BB43824009BBE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B719BC7B193DBC93A71ABAB /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PeopleManager-iOS/Prefix.pch";
+				INFOPLIST_FILE = "PeopleManager-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vokalinteractive.PeopleManager-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		92AD64DE1BB43824009BBE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1783D2C3AA27C1D3053749B9 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PeopleManager-iOS/Prefix.pch";
+				INFOPLIST_FILE = "PeopleManager-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vokalinteractive.PeopleManager-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		92AD64E01BB43824009BBE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 443B10A609EB9FDA7BC38CF8 /* Pods-PeopleManager-iOSTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "PeopleManager-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vokalinteractive.PeopleManager-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleManager-iOS.app/PeopleManager-iOS";
+			};
+			name = Debug;
+		};
+		92AD64E11BB43824009BBE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5EFF4B1B2B8703E57ADBE9D /* Pods-PeopleManager-iOSTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "PeopleManager-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vokalinteractive.PeopleManager-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleManager-iOS.app/PeopleManager-iOS";
+			};
+			name = Release;
+		};
+		92AD64E31BB43824009BBE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F327924C9291878AF7C6BD9F /* Pods-PeopleManager-iOSUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "PeopleManager-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vokalinteractive.PeopleManager-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "PeopleManager-iOS";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		92AD64E41BB43824009BBE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B8E54D3B39A51B238AF7E1 /* Pods-PeopleManager-iOSUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "PeopleManager-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vokalinteractive.PeopleManager-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "PeopleManager-iOS";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		92AD64E61BB43824009BBE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PeopleManager-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vokalinteractive.PeopleManager-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleManager-iOS.app/PeopleManager-iOS";
+			};
+			name = Debug;
+		};
+		92AD64E71BB43824009BBE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PeopleManager-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vokalinteractive.PeopleManager-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleManager-iOS.app/PeopleManager-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92AD64881BB43824009BBE92 /* Build configuration list for PBXProject "PeopleManager-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92AD64DA1BB43824009BBE92 /* Debug */,
+				92AD64DB1BB43824009BBE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92AD64DC1BB43824009BBE92 /* Build configuration list for PBXNativeTarget "PeopleManager-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92AD64DD1BB43824009BBE92 /* Debug */,
+				92AD64DE1BB43824009BBE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92AD64DF1BB43824009BBE92 /* Build configuration list for PBXNativeTarget "PeopleManager-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92AD64E01BB43824009BBE92 /* Debug */,
+				92AD64E11BB43824009BBE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92AD64E21BB43824009BBE92 /* Build configuration list for PBXNativeTarget "PeopleManager-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92AD64E31BB43824009BBE92 /* Debug */,
+				92AD64E41BB43824009BBE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92AD64E51BB43824009BBE92 /* Build configuration list for PBXNativeTarget "PeopleManager-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92AD64E61BB43824009BBE92 /* Debug */,
+				92AD64E71BB43824009BBE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92AD64851BB43824009BBE92 /* Project object */;
+}

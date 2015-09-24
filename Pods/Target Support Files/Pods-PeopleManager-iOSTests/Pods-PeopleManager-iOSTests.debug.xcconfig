@@ -1,0 +1,5 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ILGHttpConstants" "${PODS_ROOT}/Headers/Public/KIF" "${PODS_ROOT}/Headers/Public/VOKBenkode" "${PODS_ROOT}/Headers/Public/VOKMockUrlProtocol" "${PODS_ROOT}/Headers/Public/XcodeCoverage"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ILGHttpConstants" -isystem "${PODS_ROOT}/Headers/Public/KIF" -isystem "${PODS_ROOT}/Headers/Public/VOKBenkode" -isystem "${PODS_ROOT}/Headers/Public/VOKMockUrlProtocol" -isystem "${PODS_ROOT}/Headers/Public/XcodeCoverage"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"ILGHttpConstants" -l"VOKBenkode" -l"VOKMockUrlProtocol"
+PODS_ROOT = ${SRCROOT}/Pods
