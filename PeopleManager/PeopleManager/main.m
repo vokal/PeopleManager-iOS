@@ -1,6 +1,6 @@
 //
 //  main.m
-//  PeopleManager-iOS
+//  PeopleManager
 //
 //  Created by Scott Rasche on 9/24/15.
 //  Copyright © 2015 vokal. All rights reserved.

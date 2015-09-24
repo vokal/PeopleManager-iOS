@@ -7,14 +7,14 @@
     "42BA6AB2547975A7DE2F32BADEDD3507A9379A43" : 0,
     "8806A9174D514245211C9705CB2D44777C2F2CDA" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F0D2DC81-E643-4B97-91E5-327130B696B1",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4D0BD76F-1A0C-4CD9-8BE7-F51326B05C09",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "42BA6AB2547975A7DE2F32BADEDD3507A9379A43" : "PeopleManager-iOS\/",
     "8806A9174D514245211C9705CB2D44777C2F2CDA" : ""
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "PeopleManager-iOS",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PeopleManager",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PeopleManager-iOS.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PeopleManager\/PeopleManager.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/scottrasche\/PeopleManager-iOS",

@@ -6,12 +6,12 @@ platform :ios, '8.0'
 pod 'XcodeCoverage', '~>1.2'
 
 
-target 'PeopleManager-iOSTests', :exclusive => true do
+target 'PeopleManagerTests', :exclusive => true do
     # Put testing-only pods here
     pod 'VOKMockUrlProtocol'
 end
 
-target 'PeopleManager-iOSUITests', :exclusive => true do
+target 'PeopleManagerUITests', :exclusive => true do
     # Put UI-testing-only pods here
     pod 'KIF'
     pod 'VOKMockUrlProtocol'
