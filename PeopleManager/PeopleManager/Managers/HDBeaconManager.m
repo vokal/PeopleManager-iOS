@@ -27,7 +27,7 @@
     static HDBeaconManager *beaconManager;
     if (!beaconManager) {
         beaconManager = [[HDBeaconManager alloc] init];
-        beaconManager.vokalRegion = [[CLCircularRegion alloc] initWithCenter:CLLocationCoordinate2DMake(41.8922513, -87.63329269999997) radius:5000 identifier:@"Vokal"];
+        beaconManager.vokalRegion = [[CLCircularRegion alloc] initWithCenter:CLLocationCoordinate2DMake(41.8922513, -87.63329269999997) radius:500 identifier:@"Vokal"];
         beaconManager.locationManager = [[CLLocationManager alloc] init];
         beaconManager.locationManager.delegate = beaconManager;
         [beaconManager.locationManager startMonitoringForRegion:beaconManager.vokalRegion];
@@ -66,7 +66,11 @@
 {
     [self.delegate didExitPlace:visit.place];
     UILocalNotification *note1 = [[UILocalNotification alloc] init];
-    note1.alertBody = [NSString stringWithFormat:@"Exited %@", visit.place.name];
+    NSString *exitPlace = visit.place.name;
+    if ([visit.place.name isEqualToString:@"Chalk Room"]) {
+        exitPlace = BEACON_RECEPTION;
+    }
+    note1.alertBody = [NSString stringWithFormat:@"Exited %@", exitPlace];
     note1.alertAction = @"Exited Region";
     note1.soundName = SOUND_EXITED_REGION;
     note1.userInfo = [NSDictionary dictionaryWithObject:visit.place.name forKey:NOTIFICATION_IDENTIFIER_EXIT];
@@ -94,34 +98,20 @@ presentLocalNotificationsForCommunications:(NSArray *)communications
 #pragma mark - CLLocationManagerDelegate
 
 - (void)locationManager:(CLLocationManager *)manager
-      didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
-{
-    NSLog(@"didDetermineState : %ld : %@", state, region.identifier);
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-        didRangeBeacons:(NSArray<CLBeacon *> *)beacons inRegion:(CLBeaconRegion *)region
-{
-    NSLog(@"didRangeBeacons %@", beacons);
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region
-              withError:(NSError *)error
-{
-    NSLog(@"rangingBeaconsDidFailForRegion");
-}
-
-- (void)locationManager:(CLLocationManager *)manager
          didEnterRegion:(CLRegion *)region
 {
     NSLog(@"didEnterRegion : %@", region.identifier);
+    [GMBLPlaceManager startMonitoring];
+    [GMBLCommunicationManager startReceivingCommunications];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
           didExitRegion:(CLRegion *)region
 {
     NSLog(@"did exit = %@", region.identifier);
+    [GMBLPlaceManager stopMonitoring];
+    [GMBLCommunicationManager stopReceivingCommunications];
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager
