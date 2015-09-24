@@ -1,6 +1,6 @@
 //
-//  PeopleManager_iOSTests.m
-//  PeopleManager-iOSTests
+//  PeopleManagerTests.m
+//  PeopleManagerTests
 //
 //  Created by Scott Rasche on 9/24/15.
 //  Copyright © 2015 vokal. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface PeopleManager_iOSTests : XCTestCase
+@interface PeopleManagerTests : XCTestCase
 
 @end
 
-@implementation PeopleManager_iOSTests
+@implementation PeopleManagerTests
 
 - (void)setUp {
     [super setUp];

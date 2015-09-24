@@ -1,0 +1,38 @@
+language: objective-c
+before_install:
+  - brew update > /dev/null; if brew outdated | grep -qx xctool; then brew upgrade xctool; fi  # Ensure that xctool is up-to-date
+before_script:
+  - chmod +x travis/*.sh # Ensure that scripts are executable
+  - ./travis/add-key.sh  # Import any keys and certificates into the keychain.
+script: ./travis/build.sh  # Primary (simulator) build & test.
+after_success:
+  - ./travis/codecov.sh # generate and upload code coverage results
+  - ./travis/distribute.sh  # On main-repo builds (after merge, etc.), distribute to HockeyApp, iTunes Connect, etc.
+after_script:
+  - ./travis/remove-key.sh  # Nuke the keychain.
+env:
+  global:
+  - XC_WORKSPACE="PeopleManager.xcworkspace"  # Put your workspace filename (or path relative to the root of the repo) here.
+  # - XC_PROJECT="PeopleManager.xcodeproj"  # Use XC_WORKSPACE *OR* XC_PROJECT, but not both. This assumes you're using Pods
+  - XC_SCHEME="PeopleManager"  # Put your SHARED scheme name here.
+  - XC_CONFIGURATION="Release"  # Put your build configuration name here.
+  - XCODE_COVERAGE_DIR="./Pods/XcodeCoverage/" # the directory that holds XcodeCoverage - usually in the Pods directory
+  - SDK_VERSION=8.1
+  - APPNAME="PeopleManager"  # Put your app name here.
+  - ITUNES_CONNECT_ACCOUNT="FIXME"  # Put the iTunes Connect login (email address) here.
+  - ITUNES_CONNECT_APPLE_ID="FIXME"  # Put the iTunes Connect Apple ID here.
+git:
+  depth: 10000  # For the auto-incrementing build number script to work, we need to clone with a basically-infinite depth.
+cache:
+  - bundler  # After main-repo builds, save the "bundler" (local Ruby gems) stuff to cache for future builds.
+addons:
+  artifacts:  # Artifacts are only uploaded on main-repo builds, not pull requests.
+    paths:
+    - $TRAVIS_BUILD_DIR/$APPNAME.ipa # The signed .ipa file
+    - $TRAVIS_BUILD_DIR/$APPNAME.app.dSYM.zip # The symbolication file from the build output.
+    - $TRAVIS_BUILD_DIR/lcov.zip # The zipped test coverage folder from XcodeCoverage.
+    key:
+      secure: #This must be generated securely by a Senior developer using the Travis Artifact creator at https://github.com/vokal/TravisExample-iOS.
+    secret:
+      secure: #This must be generated securely by a Senior developer using the Travis Artifact creator at https://github.com/vokal/TravisExample-iOS.
+    bucket: vokaltravis #Talk to a Senior developer if you need to access the uploaded artifacts.

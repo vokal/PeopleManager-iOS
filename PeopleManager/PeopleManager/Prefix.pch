@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files in the 'PeopleManager-iOS' project
+// Prefix header for all source files in the 'PeopleManager' project
 //
 #ifndef HDPrefix_pch
 #define HDPrefix_pch
