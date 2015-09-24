@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HDMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Xz-hG-dwr">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnC-T1-rjn">
+                                <rect key="frame" x="0.0" y="20" width="600" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ladder room : -71" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd5-Im-epT">
+                                        <rect key="frame" x="8" y="14.5" width="130.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chalk room : -91" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MZ-n1-mMt">
+                                        <rect key="frame" x="468" y="15" width="124" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6MZ-n1-mMt" secondAttribute="trailing" constant="8" id="7To-5a-xgf"/>
+                                    <constraint firstAttribute="height" constant="50" id="B1k-4e-9fr"/>
+                                    <constraint firstItem="Yd5-Im-epT" firstAttribute="leading" secondItem="YnC-T1-rjn" secondAttribute="leading" constant="8" id="QFX-fa-dXH"/>
+                                    <constraint firstItem="Yd5-Im-epT" firstAttribute="centerY" secondItem="YnC-T1-rjn" secondAttribute="centerY" id="fCu-vN-KnW"/>
+                                    <constraint firstItem="6MZ-n1-mMt" firstAttribute="centerY" secondItem="YnC-T1-rjn" secondAttribute="centerY" id="ltU-ZZ-qRA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YnC-T1-rjn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="3VY-8b-heE"/>
+                            <constraint firstAttribute="trailing" secondItem="YnC-T1-rjn" secondAttribute="trailing" id="CvD-ZC-XH7"/>
+                            <constraint firstItem="YnC-T1-rjn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GvH-uL-V8x"/>
+                            <constraint firstItem="2Xz-hG-dwr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ICy-aP-Uuh"/>
+                            <constraint firstItem="2Xz-hG-dwr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="Nnx-0f-5TF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Xz-hG-dwr" secondAttribute="bottom" id="ZgY-Cf-iRH"/>
+                            <constraint firstAttribute="trailing" secondItem="2Xz-hG-dwr" secondAttribute="trailing" id="euL-LY-96U"/>
+                            <constraint firstItem="2Xz-hG-dwr" firstAttribute="top" secondItem="YnC-T1-rjn" secondAttribute="bottom" id="u8j-Hx-8di"/>
+                            <constraint firstItem="2Xz-hG-dwr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uSE-dE-CQ8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ICy-aP-Uuh"/>
+                                <exclude reference="Nnx-0f-5TF"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="labelChalkRoom" destination="6MZ-n1-mMt" id="8W0-sb-Iur"/>
+                        <outlet property="labelLadderRoom" destination="Yd5-Im-epT" id="c69-ow-gxC"/>
+                        <outlet property="textView" destination="2Xz-hG-dwr" id="XS1-wF-dXQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="455" y="349"/>
         </scene>
     </scenes>
 </document>
