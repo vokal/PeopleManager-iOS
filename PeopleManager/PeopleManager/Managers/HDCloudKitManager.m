@@ -318,7 +318,80 @@ withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler
     [self.databaseToUse addOperation:queryOperation];
 }
 
+- (void)fetchSignedInPeopleWithCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@", FIELD_STATUS, SIGNED_IN];
+    CKQuery *query = [[CKQuery alloc] initWithRecordType:RECORD_TYPE_PERSON_STATUS predicate:predicate];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:FIELD_NAME ascending:YES];
+    query.sortDescriptors = @[sort];
+    
+    NSMutableArray *results = [NSMutableArray array];
+    
+    CKQueryOperation *queryOperation = [[CKQueryOperation alloc] initWithQuery:query];
+    queryOperation.qualityOfService = NSQualityOfServiceUserInteractive;
+    
+    queryOperation.recordFetchedBlock = ^(CKRecord *record) {
+        if (![results containsObject:record]) {
+            [results addObject:record];
+        }
+    };
+    
+    queryOperation.queryCompletionBlock = ^(CKQueryCursor *cursor, NSError *error) {
+        if (completionHandler) {
+            completionHandler(results, error);
+        }
+    };
+    [self.databaseToUse addOperation:queryOperation];
+}
+
+- (void)fetchLocationsForPeople:(NSArray *)people withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K IN %@", FIELD_NAME, people];
+    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@", FIELD_NAME, @"Frank"];
+    CKQuery *query = [[CKQuery alloc] initWithRecordType:RECORD_TYPE_PERSON_ACTIVITY predicate:predicate];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:FIELD_NAME ascending:YES];
+    NSSortDescriptor *sort2 = [NSSortDescriptor sortDescriptorWithKey:FIELD_DATE_ADDED ascending:NO];
+    query.sortDescriptors = @[sort, sort2];
+    
+    NSMutableArray *results = [NSMutableArray array];
+    
+    CKQueryOperation *queryOperation = [[CKQueryOperation alloc] initWithQuery:query];
+    queryOperation.qualityOfService = NSQualityOfServiceUserInteractive;
+    
+    NSMutableSet *foundPeople = [NSMutableSet set];
+    
+    queryOperation.recordFetchedBlock = ^(CKRecord *record) {
+        if (![foundPeople containsObject:record[FIELD_NAME]]) {
+            [results addObject:record];
+            [foundPeople addObject:record[FIELD_NAME]];
+        }
+    };
+    
+    queryOperation.queryCompletionBlock = ^(CKQueryCursor *cursor, NSError *error) {
+        if (completionHandler) {
+            completionHandler(results, error);
+        }
+    };
+    [self.databaseToUse addOperation:queryOperation];
+}
+
 #pragma mark - delete
+
+- (void)deleteSignedInStatusForPerson:(NSString *)person withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler
+{
+    [self fetchPersonStatus:person withCompletionHandler:^(NSArray *records, NSError *error) {
+        
+        if (records.count) {
+            for (CKRecord *record in records) {
+                [self.databaseToUse deleteRecordWithID:record.recordID completionHandler:^(CKRecordID *_Nullable recordID, NSError *_Nullable error) {
+                    
+                }];
+            }
+        }
+        completionHandler(records, error);
+    }];
+}
+
 #pragma mark - subscribing
 
 - (void)subscribe
@@ -360,11 +433,25 @@ withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler
         notificationStatus.shouldSendContentAvailable = YES;
         personStatusUpdated.notificationInfo = notificationStatus;
         
+        
+        CKSubscription *orderMade = [[CKSubscription alloc] initWithRecordType:RECORD_TYPE_ORDER
+                                                                               predicate:truePredicate
+                                                                          subscriptionID:SUBSCRIPTION_ORDER
+                                                                                 options:CKSubscriptionOptionsFiresOnRecordCreation|CKSubscriptionOptionsFiresOnRecordUpdate];
+        
+        CKNotificationInfo *notificationStatusOrder = [[CKNotificationInfo alloc] init];
+        notificationStatusOrder.alertBody = @"Order Received";
+        notificationStatusOrder.shouldSendContentAvailable = YES;
+        orderMade.notificationInfo = notificationStatus;
+        
+        
+        
+        
         CKModifySubscriptionsOperation *subscriptionsOp = [[CKModifySubscriptionsOperation alloc]
                                                            initWithSubscriptionsToSave:@[
                                                                                          activitySubscriptionCreate,
-                                                                                         messageSubscriptionCreate,
                                                                                          personStatusUpdated,
+                                                                                         orderMade
                                                                                          ]
                                                            subscriptionIDsToDelete:nil];
         subscriptionsOp.qualityOfService = NSQualityOfServiceUtility;
@@ -378,6 +465,8 @@ withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler
                         [defaults setObject:subscription.subscriptionID forKey:SUBSCRIPTION_ADD_MESSAGE];
                     } else if ([subscription.subscriptionID isEqualToString:SUBSCRIPTION_STATUS_UPDATE]) {
                         [defaults setObject:subscription.subscriptionID forKey:SUBSCRIPTION_STATUS_UPDATE];
+                    } else if ([subscription.subscriptionID isEqualToString:SUBSCRIPTION_ORDER]) {
+                        [defaults setObject:subscription.subscriptionID forKey:SUBSCRIPTION_ORDER];
                     }
                 }
                 [defaults synchronize];
@@ -417,6 +506,10 @@ withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler
         NSString *subscriptionStatus = [[NSUserDefaults standardUserDefaults] objectForKey:SUBSCRIPTION_STATUS_UPDATE];
         if (subscriptionStatus) {
             [keys addObject:subscriptionStatus];
+        }
+        NSString *subscriptionOrder = [[NSUserDefaults standardUserDefaults] objectForKey:SUBSCRIPTION_ORDER];
+        if (subscriptionOrder) {
+            [keys addObject:subscriptionOrder];
         }
 
         NSLog(@"Keys to unsubscribe from : %@", keys);

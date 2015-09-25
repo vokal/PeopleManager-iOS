@@ -16,6 +16,12 @@
 		92E6309A1BB59270004A2B54 /* HDBeaconModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E630991BB59270004A2B54 /* HDBeaconModel.m */; settings = {ASSET_TAGS = (); }; };
 		92E6309D1BB59E79004A2B54 /* HDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E6309C1BB59E79004A2B54 /* HDUtilities.m */; settings = {ASSET_TAGS = (); }; };
 		92E6309F1BB5AB1B004A2B54 /* Vokal_office_map_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92E6309E1BB5AB1B004A2B54 /* Vokal_office_map_2.jpg */; settings = {ASSET_TAGS = (); }; };
+		92E630A41BB5C1B0004A2B54 /* HDPersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E630A31BB5C1B0004A2B54 /* HDPersonView.m */; settings = {ASSET_TAGS = (); }; };
+		92E630A61BB5C1BB004A2B54 /* HDPersonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92E630A51BB5C1BB004A2B54 /* HDPersonView.xib */; settings = {ASSET_TAGS = (); }; };
+		92E630A91BB5C344004A2B54 /* Kyle.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E630A71BB5C344004A2B54 /* Kyle.png */; settings = {ASSET_TAGS = (); }; };
+		92E630AA1BB5C344004A2B54 /* Scott.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E630A81BB5C344004A2B54 /* Scott.png */; settings = {ASSET_TAGS = (); }; };
+		92E630AC1BB5C47B004A2B54 /* Smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E630AB1BB5C47B004A2B54 /* Smiley.png */; settings = {ASSET_TAGS = (); }; };
+		92E630AE1BB5C6B9004A2B54 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E630AD1BB5C6B9004A2B54 /* QuartzCore.framework */; };
 		92EA642F1BB4455D00DE670D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA642E1BB4455D00DE670D /* CoreLocation.framework */; };
 		92EA64331BB4458400DE670D /* HDBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EA64321BB4458400DE670D /* HDBeaconManager.m */; settings = {ASSET_TAGS = (); }; };
 		92EA64361BB4499900DE670D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA64351BB4499900DE670D /* CloudKit.framework */; };
@@ -79,6 +85,13 @@
 		92E6309B1BB59E79004A2B54 /* HDUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDUtilities.h; sourceTree = "<group>"; };
 		92E6309C1BB59E79004A2B54 /* HDUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDUtilities.m; sourceTree = "<group>"; };
 		92E6309E1BB5AB1B004A2B54 /* Vokal_office_map_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Vokal_office_map_2.jpg; sourceTree = "<group>"; };
+		92E630A21BB5C1B0004A2B54 /* HDPersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDPersonView.h; sourceTree = "<group>"; };
+		92E630A31BB5C1B0004A2B54 /* HDPersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDPersonView.m; sourceTree = "<group>"; };
+		92E630A51BB5C1BB004A2B54 /* HDPersonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HDPersonView.xib; sourceTree = "<group>"; };
+		92E630A71BB5C344004A2B54 /* Kyle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kyle.png; sourceTree = "<group>"; };
+		92E630A81BB5C344004A2B54 /* Scott.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scott.png; sourceTree = "<group>"; };
+		92E630AB1BB5C47B004A2B54 /* Smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smiley.png; sourceTree = "<group>"; };
+		92E630AD1BB5C6B9004A2B54 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		92EA642E1BB4455D00DE670D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		92EA64311BB4458400DE670D /* HDBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDBeaconManager.h; sourceTree = "<group>"; };
 		92EA64321BB4458400DE670D /* HDBeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDBeaconManager.m; sourceTree = "<group>"; };
@@ -139,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E630AE1BB5C6B9004A2B54 /* QuartzCore.framework in Frameworks */,
 				92EA643D1BB4522900DE670D /* libz.tbd in Frameworks */,
 				92EA64381BB44F6400DE670D /* Gimbal.framework in Frameworks */,
 				92EA64361BB4499900DE670D /* CloudKit.framework in Frameworks */,
@@ -189,6 +203,7 @@
 		6CF613F5F774183753F65E28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92E630AD1BB5C6B9004A2B54 /* QuartzCore.framework */,
 				92EA643C1BB4522900DE670D /* libz.tbd */,
 				92EA64371BB44F6400DE670D /* Gimbal.framework */,
 				92EA64351BB4499900DE670D /* CloudKit.framework */,
@@ -233,6 +248,9 @@
 		92EA64411BB45D0100DE670D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				92E630AB1BB5C47B004A2B54 /* Smiley.png */,
+				92E630A71BB5C344004A2B54 /* Kyle.png */,
+				92E630A81BB5C344004A2B54 /* Scott.png */,
 				92E6309E1BB5AB1B004A2B54 /* Vokal_office_map_2.jpg */,
 				92E630951BB590EF004A2B54 /* smile.png */,
 				92EA644B1BB4A47200DE670D /* floor_plan.png */,
@@ -391,6 +409,9 @@
 		92F50ACF1BB4429000199103 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				92E630A21BB5C1B0004A2B54 /* HDPersonView.h */,
+				92E630A31BB5C1B0004A2B54 /* HDPersonView.m */,
+				92E630A51BB5C1BB004A2B54 /* HDPersonView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -570,16 +591,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F50AC41BB4429000199103 /* remove-key.sh in Resources */,
+				92E630AA1BB5C344004A2B54 /* Scott.png in Resources */,
+				92E630AC1BB5C47B004A2B54 /* Smiley.png in Resources */,
 				92EA64431BB45D0100DE670D /* Rooster.m4a in Resources */,
 				92E630961BB590EF004A2B54 /* smile.png in Resources */,
 				92EA64421BB45D0100DE670D /* Cash Register.caf in Resources */,
 				92E6309F1BB5AB1B004A2B54 /* Vokal_office_map_2.jpg in Resources */,
 				92E630911BB581F6004A2B54 /* fired.m4a in Resources */,
 				92F50AD81BB4429000199103 /* LaunchScreen.storyboard in Resources */,
+				92E630A61BB5C1BB004A2B54 /* HDPersonView.xib in Resources */,
 				92F50AD51BB4429000199103 /* Assets.xcassets in Resources */,
 				92EA644E1BB4A4BC00DE670D /* MainIPad.storyboard in Resources */,
 				92F50AD31BB4429000199103 /* Main.storyboard in Resources */,
 				92EA644C1BB4A47200DE670D /* floor_plan.png in Resources */,
+				92E630A91BB5C344004A2B54 /* Kyle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +767,7 @@
 				92F50AB51BB4429000199103 /* main.m in Sources */,
 				92E630941BB58458004A2B54 /* HDSignInViewController.m in Sources */,
 				92EA64511BB4A59C00DE670D /* HDMainIPadViewController.m in Sources */,
+				92E630A41BB5C1B0004A2B54 /* HDPersonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,4 +42,21 @@
     }
 }
 
++ (id)createNewCustomViewFromNib
+{
+    NSString *cellIdentifier = NSStringFromClass ([self class]);
+    
+    NSArray* nibContents = [[NSBundle mainBundle]
+                            loadNibNamed:cellIdentifier owner:self options:NULL];
+    NSEnumerator *nibEnumerator = [nibContents objectEnumerator];
+    id createdView = nil;
+    NSObject* nibItem = nil;
+    while ( (nibItem = [nibEnumerator nextObject]) != nil) {
+        if ( [nibItem isKindOfClass: [self class]]) {
+            createdView = nibItem;
+            break;
+        }
+    }
+    return createdView;
+}
 @end

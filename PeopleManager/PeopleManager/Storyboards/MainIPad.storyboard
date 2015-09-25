@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0BW-pn-aw1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main iPad View Controller-->
@@ -28,15 +29,74 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xy-Nr-nrd" userLabel="Ladder View">
+                                <rect key="frame" x="78" y="423" width="167" height="220"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="fvj-hR-4ka"/>
+                                    <constraint firstAttribute="width" constant="167" id="hD0-bK-mJA"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kZ-lk-oqM" userLabel="Reception View">
+                                <rect key="frame" x="422" y="409" width="169" height="151"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="5fO-km-lsH"/>
+                                    <constraint firstAttribute="height" constant="151" id="bqf-zi-RyE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKG-i1-Obb" userLabel="Status View">
+                                <rect key="frame" x="0.0" y="813" width="768" height="211"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People that are here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF2-Qz-6HC">
+                                        <rect key="frame" x="8" y="8" width="283.5" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aS4-tO-vPI">
+                                        <rect key="frame" x="8" y="54.5" width="365" height="128.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="365" id="uhV-ri-gsE"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aS4-tO-vPI" secondAttribute="bottom" constant="28" id="9zf-gd-LQZ"/>
+                                    <constraint firstItem="tF2-Qz-6HC" firstAttribute="top" secondItem="oKG-i1-Obb" secondAttribute="top" constant="8" id="ADr-wV-26S"/>
+                                    <constraint firstItem="aS4-tO-vPI" firstAttribute="top" secondItem="tF2-Qz-6HC" secondAttribute="bottom" constant="8" id="Fwq-Kl-k4f"/>
+                                    <constraint firstItem="tF2-Qz-6HC" firstAttribute="leading" secondItem="oKG-i1-Obb" secondAttribute="leading" constant="8" id="mcf-BI-QFV"/>
+                                    <constraint firstItem="aS4-tO-vPI" firstAttribute="leading" secondItem="tF2-Qz-6HC" secondAttribute="leading" id="zv7-Y1-UiU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oKG-i1-Obb" firstAttribute="leading" secondItem="zkG-oo-XSy" secondAttribute="leading" id="5RN-1R-lZ6"/>
+                            <constraint firstItem="2xy-Nr-nrd" firstAttribute="leading" secondItem="zkG-oo-XSy" secondAttribute="leadingMargin" constant="58" id="88T-qL-OcH"/>
+                            <constraint firstAttribute="trailing" secondItem="oKG-i1-Obb" secondAttribute="trailing" id="BOk-wN-Mk6"/>
                             <constraint firstItem="Fom-DN-7CJ" firstAttribute="top" secondItem="zkG-oo-XSy" secondAttribute="top" constant="20" id="Mze-AO-clg"/>
                             <constraint firstAttribute="trailing" secondItem="Fom-DN-7CJ" secondAttribute="trailing" id="ZZh-hM-hQ0"/>
+                            <constraint firstItem="3kZ-lk-oqM" firstAttribute="top" secondItem="GAQ-ft-v4b" secondAttribute="bottom" constant="389" id="bvy-bc-DK2"/>
+                            <constraint firstItem="RcB-Yd-pSO" firstAttribute="top" secondItem="oKG-i1-Obb" secondAttribute="bottom" id="dbZ-2K-Vo2"/>
+                            <constraint firstItem="2xy-Nr-nrd" firstAttribute="top" secondItem="GAQ-ft-v4b" secondAttribute="bottom" constant="403" id="fsl-sY-xwU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3kZ-lk-oqM" secondAttribute="trailing" constant="157" id="i0t-aN-tW3"/>
+                            <constraint firstItem="oKG-i1-Obb" firstAttribute="top" secondItem="Fom-DN-7CJ" secondAttribute="bottom" id="ivM-7Q-mfx"/>
                             <constraint firstItem="Fom-DN-7CJ" firstAttribute="leading" secondItem="zkG-oo-XSy" secondAttribute="leading" id="pUU-BV-NVP"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="floorPlan" destination="Fom-DN-7CJ" id="hjn-3B-efQ"/>
+                        <outlet property="ladderView" destination="2xy-Nr-nrd" id="oUt-pB-zAl"/>
+                        <outlet property="receptionView" destination="3kZ-lk-oqM" id="os3-Vs-hwL"/>
+                        <outlet property="statusView" destination="oKG-i1-Obb" id="eGk-cE-SCR"/>
+                        <outlet property="textViewPeople" destination="aS4-tO-vPI" id="rCO-F4-BtD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbX-8b-2si" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

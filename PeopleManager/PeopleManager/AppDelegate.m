@@ -105,35 +105,47 @@
     NSString *rid = qry[@"rid"];
     NSString *sid = qry[@"sid"];
     
-    if ([sid isEqualToString:SUBSCRIPTION_ADD_ACTIVITY]) {
-        [self.cloudManager fetchRecordWithID:rid completionHandler:^(CKRecord *record, NSError *error) {
-            
-            if (record) {
-                UIApplicationState state = application.applicationState;
-                NSString *appState = nil;
-                switch (state) {
-                    case UIApplicationStateActive:
-                        appState = @"Active";
-                        break;
-                    case UIApplicationStateBackground:
-                        appState = @"Background";
-                        break;
-                    case UIApplicationStateInactive:
-                        appState = @"Inactive";
-                        break;
-                    default:
-                        break;
-                }
-                NSLog(@"Found cloud record updated while in AppState = %@", appState);
-                // TODO: act on this - redraw screen
-                completionHandler(UIBackgroundFetchResultNewData);
+    [self.cloudManager fetchRecordWithID:rid completionHandler:^(CKRecord *record, NSError *error) {
+        
+        if (record) {
+            UIApplicationState state = application.applicationState;
+            NSString *appState = nil;
+            switch (state) {
+                case UIApplicationStateActive:
+                    appState = @"Active";
+                    break;
+                case UIApplicationStateBackground:
+                    appState = @"Background";
+                    break;
+                case UIApplicationStateInactive:
+                    appState = @"Inactive";
+                    break;
+                default:
+                    break;
+            }
+            NSLog(@"Found cloud record updated while in AppState = %@", appState);
+            // TODO: act on this - redraw screen
+            if ([sid isEqualToString:SUBSCRIPTION_ADD_ACTIVITY]) {
+                [HDUtilities showSystemWideAlertWithError:NO message:SUBSCRIPTION_ADD_ACTIVITY];
+                [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_ACTIVITY object:nil];
+                
+            } else if ([sid isEqualToString:SUBSCRIPTION_ADD_MESSAGE]) {
+                [HDUtilities showSystemWideAlertWithError:NO message:SUBSCRIPTION_ADD_MESSAGE];
+                
+            } else if ([sid isEqualToString:SUBSCRIPTION_STATUS_UPDATE]) {
+                [HDUtilities showSystemWideAlertWithError:NO message:SUBSCRIPTION_STATUS_UPDATE];
+                [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_SIGNED_IN object:nil];
+            } else if ([sid isEqualToString:SUBSCRIPTION_ORDER]) {
+                [HDUtilities showSystemWideAlertWithError:NO message:SUBSCRIPTION_ORDER];
+                [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_ORDER object:nil];
             } else {
                 completionHandler(UIBackgroundFetchResultNoData);
             }
-        }];
-    } else {
-        completionHandler(UIBackgroundFetchResultNoData);
-    }
+            completionHandler(UIBackgroundFetchResultNewData);
+        } else {
+            completionHandler(UIBackgroundFetchResultNoData);
+        }
+    }];
 }
 
  - (void)testLocalNotification

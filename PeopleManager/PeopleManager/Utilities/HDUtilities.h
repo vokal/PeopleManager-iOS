@@ -14,5 +14,5 @@
 + (void)showSystemWideAlertWithError:(BOOL)error message:(NSString *)message;
 + (CGFloat)currentScreenWidth;
 + (BOOL)isIPAD;
-
++ (id)createNewCustomViewFromNib;
 @end

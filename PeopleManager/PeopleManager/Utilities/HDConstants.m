@@ -15,6 +15,10 @@ NSString *const SOUND_FIRED = @"fired.m4a";
 NSString *const NOTIFICATION_IDENTIFIER_EXIT = @"Notification Exit";
 NSString *const NOTIFICATION_IDENTIFIER_ENTER = @"Notification Enter";
 NSString *const NOTIFICATION_APP_WIDE_ALERT = @"App Wide Alert";
+NSString *const NOTIFICATION_SIGNED_IN = @"Notification Signed In";
+NSString *const NOTIFICATION_ORDER = @"Notification Order";
+NSString *const NOTIFICATION_SIGNED_OUT = @"Notification Signed Out";
+NSString *const NOTIFICATION_ACTIVITY = @"Notification Activity";
 NSString *const KEY_ERROR_APP_WIDE_ALERT = @"Error";
 NSString *const KEY_MESSAGE_APP_WIDE_ALERT = @"Message";
 NSString *const GIMBAL_API_KEY = @"ba6c77f3-52d6-46f4-ade9-371add3c96b9";
@@ -48,6 +52,7 @@ NSString *const FIELD_DATE = @"Date";
 NSString *const SUBSCRIPTION_ADD_ACTIVITY = @"SubscriptionAddActivity";
 NSString *const SUBSCRIPTION_ADD_MESSAGE = @"SubscriptionAddMessage";
 NSString *const SUBSCRIPTION_STATUS_UPDATE = @"SubscriptionStatusUpdate";
+NSString *const SUBSCRIPTION_ORDER = @"SubscriptionOrder";
 
 NSString *const DEFAULTS_RESEND_QUEUE = @"Resend Queue";
 

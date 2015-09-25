@@ -13,6 +13,7 @@
 #import "HDConstants.h"
 #import "HDCloudKitManager.h"
 #import "HDUtilities.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface HDMainViewController () <BeaconDelegate>
 
@@ -58,6 +59,10 @@
     self.labelWhereToWork.text = @"";
     
     self.employeeName = [[NSUserDefaults standardUserDefaults] objectForKey:DEFAULTS_USER_ID];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(orderReceived:)
+                                                 name:NOTIFICATION_ORDER
+                                               object:nil];
     self.title = self.employeeName;
 }
 
@@ -93,6 +98,10 @@
 
 - (void)didEnterPlace:(GMBLPlace *)place
 {
+    self.strongestBeaconSignal = [[HDBeaconModel alloc] init];
+    self.strongestBeaconSignal.beaconLocation = place.name;
+    self.strongestBeaconSignal.lastReportedSignalStrength = -90;
+    self.strongestBeaconSignal.lastEntry = [NSDate date];
     NSString *text = self.textView.text;
     text = [text stringByAppendingFormat:@"Entering : %@, %@\n", place.name, [self.dateFormatter stringFromDate:[NSDate date]]];
     self.textView.text = text;
@@ -192,6 +201,9 @@
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     [self.navigationController popToRootViewControllerAnimated:YES];
                 }];
+                [self.cloudManager deleteSignedInStatusForPerson:self.employeeName withCompletionHandler:^(NSArray *records, NSError *error) {
+                    
+                }];
                 
             } else {
                 [HDUtilities showSystemWideAlertWithError:YES message:error.localizedDescription];
@@ -199,5 +211,40 @@
         }];
 }
 
+#pragma mark - notifications
+
+- (void)orderReceived:(NSNotification *)notification
+{
+    NSLog(@"notification = %@", notification.userInfo);
+    
+    [self.cloudManager fetchOrdersForPerson:self.employeeName
+                                     onDate:[NSDate date]
+                      withCompletionHandler:^(NSArray *records, NSError *error) {
+                          if (records.count) {
+                              CKRecord *order = records.firstObject;
+                              NSString *loc = order[FIELD_BEACON_REGION];
+                              
+                              [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                  NSString *message = [NSString stringWithFormat:@"Go to %@!!!", loc];
+                                  UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Orders Recevied"
+                                                                                                 message:message
+                                                                                          preferredStyle:UIAlertControllerStyleAlert];
+                                  UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                                  [alert addAction:ok];
+                                  [self presentViewController:alert animated:YES completion:nil];
+                                  
+                                  [self playSound];
+                              }];
+                          }
+                      }];
+}
+
+- (void)playSound
+{
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"fired" ofType:@"m4a"];
+    SystemSoundID soundID;
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath: soundPath], &soundID);
+    AudioServicesPlaySystemSound (soundID);
+}
 
 @end

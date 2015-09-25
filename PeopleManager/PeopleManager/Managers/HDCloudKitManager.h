@@ -46,6 +46,9 @@ withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
 - (void)fetchEntrancesToBeaconRegion:(NSString *)beaconRegion withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
 - (void)fetchOrdersForPerson:(NSString *)person onDate:(NSDate *)date withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
 - (void)fetchPersonStatus:(NSString *)person withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
+- (void)fetchSignedInPeopleWithCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
+- (void)fetchLocationsForPeople:(NSArray *)people withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
 // delete
+- (void)deleteSignedInStatusForPerson:(NSString *)person withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
 
 @end
