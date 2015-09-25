@@ -24,8 +24,9 @@
 
 + (HDBeaconManager *)sharedInstance
 {
-    static HDBeaconManager *beaconManager;
-    if (!beaconManager) {
+    static HDBeaconManager *beaconManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         beaconManager = [[HDBeaconManager alloc] init];
         beaconManager.vokalRegion = [[CLCircularRegion alloc] initWithCenter:CLLocationCoordinate2DMake(41.8922513, -87.63329269999997) radius:500 identifier:@"Vokal"];
         beaconManager.locationManager = [[CLLocationManager alloc] init];
@@ -42,7 +43,7 @@
         
         [GMBLPlaceManager startMonitoring];
         [GMBLCommunicationManager startReceivingCommunications];
-    }
+    });
     return beaconManager;
 }
 
@@ -50,6 +51,10 @@
 
 - (void)placeManager:(GMBLPlaceManager *)manager didBeginVisit:(GMBLVisit *)visit
 {
+    NSArray *currentVisits = manager.currentVisits;
+    for (GMBLVisit *v in currentVisits) {
+        NSLog(@"Current visits = %@", v);
+    }
     [self.delegate didEnterPlace:visit.place];
     UILocalNotification *note1 = [[UILocalNotification alloc] init];
     note1.alertBody = [NSString stringWithFormat:@"Entered %@", visit.place.name];
@@ -64,6 +69,10 @@
 
 - (void)placeManager:(GMBLPlaceManager *)manager didEndVisit:(GMBLVisit *)visit
 {
+    NSArray *currentVisits = manager.currentVisits;
+    for (GMBLVisit *v in currentVisits) {
+        NSLog(@"Current visits = %@", v);
+    }
     [self.delegate didExitPlace:visit.place];
     UILocalNotification *note1 = [[UILocalNotification alloc] init];
     NSString *exitPlace = visit.place.name;
@@ -101,6 +110,7 @@ presentLocalNotificationsForCommunications:(NSArray *)communications
          didEnterRegion:(CLRegion *)region
 {
     NSLog(@"didEnterRegion : %@", region.identifier);
+    // it looks like they use geo fencing already to manage this
     [GMBLPlaceManager startMonitoring];
     [GMBLCommunicationManager startReceivingCommunications];
 }
@@ -109,8 +119,9 @@ presentLocalNotificationsForCommunications:(NSArray *)communications
           didExitRegion:(CLRegion *)region
 {
     NSLog(@"did exit = %@", region.identifier);
-    [GMBLPlaceManager stopMonitoring];
-    [GMBLCommunicationManager stopReceivingCommunications];
+    // it looks like they use geo fencing already to manage this
+    //[GMBLPlaceManager stopMonitoring];
+    //[GMBLCommunicationManager stopReceivingCommunications];
     
 }
 
