@@ -10,6 +10,7 @@
 #import "HDBeaconManager.h"
 #import "HDConstants.h"
 #import "HDCloudKitManager.h"
+#import "HDUtilities.h"
 #include <assert.h>
 #include <stdbool.h>
 #include <sys/types.h>
@@ -19,6 +20,7 @@
 @interface AppDelegate()
 
 @property (nonatomic, strong) HDCloudKitManager *cloudManager;
+@property (nonatomic, strong) UIView *appWideAlertView;
 
 @end
 
@@ -30,7 +32,9 @@
     UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound) categories:nil];
     [application registerUserNotificationSettings:notificationSettings];
     [application registerForRemoteNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayAppWideAlert:) name:NOTIFICATION_APP_WIDE_ALERT object:nil];
     self.cloudManager = [HDCloudKitManager sharedInstance];
+    self.window.tintColor = [UIColor colorWithRed:249.0/255 green:243.0/255 blue:143.0/255 alpha:1.0];
     
     return YES;
 }
@@ -142,6 +146,79 @@
     [[UIApplication sharedApplication] presentLocalNotificationNow:note1];
     NSLog(@"Notification : %@", note1);
     note1.applicationIconBadgeNumber = 0;
+}
+
+#pragma mark - Utils
+
+- (void)displayAppWideAlert:(NSNotification *)notification
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSDictionary *userInfo = notification.userInfo;
+        NSNumber *isError = userInfo[KEY_ERROR_APP_WIDE_ALERT];
+        BOOL err = NO;
+        if (isError!=nil) {
+            err = isError.boolValue;
+        }
+        NSString *message = userInfo[KEY_MESSAGE_APP_WIDE_ALERT];
+        
+        if (!self.appWideAlertView) {
+            self.appWideAlertView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [HDUtilities currentScreenWidth], 64)];
+            self.appWideAlertView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+            self.appWideAlertView.backgroundColor = [UIColor clearColor];
+            UIView *transparentBackground = [[UIView alloc] initWithFrame:self.appWideAlertView.frame];
+            transparentBackground.tag = 11;
+            transparentBackground.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+            transparentBackground.alpha = 0.8;
+            UILabel *label = [[UILabel alloc] initWithFrame:self.appWideAlertView.frame];
+            label.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+            label.textColor = [UIColor whiteColor];
+            label.numberOfLines = 0;
+            label.textAlignment = NSTextAlignmentCenter;
+            label.minimumScaleFactor = 0.5;
+            label.adjustsFontSizeToFitWidth = YES;
+            label.tag = 12;
+            [self.appWideAlertView addSubview:transparentBackground];
+            [self.appWideAlertView addSubview:label];
+            self.appWideAlertView.userInteractionEnabled = NO;
+        } else {
+            self.appWideAlertView.frame = CGRectMake(0, 0, [HDUtilities currentScreenWidth], 64); // in case we've rotated and screen size is different
+        }
+        UIView *transBack = (UIView *)[self.appWideAlertView viewWithTag:11];
+        if (err) {
+            transBack.backgroundColor = [UIColor redColor];
+        } else {
+            transBack.backgroundColor = self.window.tintColor;//[UIColor colorWithRed:0.0 green:0.0 blue:240.0/255.0 alpha:1.0];
+        }
+        UILabel *messageLabel = (UILabel *)[self.appWideAlertView viewWithTag:12];
+        if (message) {
+            if (self.appWideAlertView.window) {
+                messageLabel.text = [messageLabel.text stringByAppendingFormat:@"\n%@", message];
+            } else {
+                messageLabel.text = message;
+            }
+        } else {
+            messageLabel.text = @"message is nil";
+        }
+        self.appWideAlertView.alpha = 0.0;
+        [self.window addSubview:self.appWideAlertView];
+        [UIView animateWithDuration:1.0
+                         animations:^{
+                             self.appWideAlertView.alpha = 1.0;
+                         } completion:^(BOOL finished) {
+                             [self performSelector:@selector(dismissAppWideAlert) withObject:nil afterDelay:10.0];
+                         }];
+    });
+}
+
+- (void)dismissAppWideAlert
+{
+    [UIView animateWithDuration:1.0
+                     animations:^{
+                         self.appWideAlertView.alpha = 0.0;
+                     } completion:^(BOOL finished) {
+                         [self.appWideAlertView removeFromSuperview];
+                         self.appWideAlertView = nil;
+                     }];
 }
 
 @end

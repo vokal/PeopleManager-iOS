@@ -7,6 +7,8 @@
 //
 
 #import "HDMainIPadViewController.h"
+#import "HDCloudKitManager.h"
+#import "HDUtilities.h"
 
 @interface HDMainIPadViewController ()
 
@@ -14,16 +16,17 @@
 
 @implementation HDMainIPadViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 

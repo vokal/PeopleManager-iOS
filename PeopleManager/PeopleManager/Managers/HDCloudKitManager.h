@@ -31,12 +31,21 @@ withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
              onDate:(NSDate *)date
 withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
 
+- (void)tellPerson:(NSString *)person
+      gotoLocation:(NSString *)location
+            onDate:(NSDate *)date
+withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
+
+- (void)signIn:(BOOL)signingIn withPerson:(NSString *)person onDate:(NSDate *)date withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
+
 // fetch
 - (void)fetchRecordWithID:(NSString *)recordID completionHandler:(HDCloudRecordCompletionHandler)completionHandler;
 - (void)fetchRecordsForPerson:(NSString *)person withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
 - (void)fetchMessagesToPerson:(NSString *)person withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
 - (void)fetchMessagesFromPerson:(NSString *)person withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
 - (void)fetchEntrancesToBeaconRegion:(NSString *)beaconRegion withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
-
+- (void)fetchOrdersForPerson:(NSString *)person onDate:(NSDate *)date withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
+- (void)fetchPersonStatus:(NSString *)person withCompletionHandler:(HDCloudRecordsCompletionHandler)completionHandler;
 // delete
+
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 @class GMBLPlace;
 @class GMBLBeaconSighting;
+@class GMBLVisit;
 
 @protocol BeaconDelegate <NSObject>
 
@@ -23,5 +24,7 @@
 + (HDBeaconManager *)sharedInstance;
 
 @property (nonatomic, weak) id <BeaconDelegate> delegate;
+@property (nonatomic, strong, readonly) GMBLVisit *mostRecentBeaconZoneEntered;
+@property (nonatomic, strong, readonly) GMBLVisit *mostRecentBeaconZoneExited;
 
 @end
