@@ -9,22 +9,29 @@
 #import "AppDelegate.h"
 #import "HDBeaconManager.h"
 #import "HDConstants.h"
+#import "HDCloudKitManager.h"
 #include <assert.h>
 #include <stdbool.h>
 #include <sys/types.h>
 #include <unistd.h>
 #include <sys/sysctl.h>
 
+@interface AppDelegate()
+
+@property (nonatomic, strong) HDCloudKitManager *cloudManager;
+
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //TODO: Override point for customization after application launch.
     [self redirectConsoleLogToDocumentFolder];
     UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound) categories:nil];
     [application registerUserNotificationSettings:notificationSettings];
     [application registerForRemoteNotifications];
-    //[self performSelector:@selector(testLocalNotification) withObject:nil afterDelay:5.0];
+    self.cloudManager = [HDCloudKitManager sharedInstance];
+    
     return YES;
 }
 
@@ -84,7 +91,45 @@
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
     NSLog(@"didReceiveLocalNotification = %@", notification);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler
+{
+    NSLog(@"Received remote notification : %@", userInfo);
+    NSDictionary *ck = [userInfo objectForKey:@"ck"];
+    NSDictionary *qry = ck[@"qry"];
+    NSString *rid = qry[@"rid"];
+    NSString *sid = qry[@"sid"];
     
+    if ([sid isEqualToString:SUBSCRIPTION_ADD_ACTIVITY]) {
+        [self.cloudManager fetchRecordWithID:rid completionHandler:^(CKRecord *record, NSError *error) {
+            
+            if (record) {
+                UIApplicationState state = application.applicationState;
+                NSString *appState = nil;
+                switch (state) {
+                    case UIApplicationStateActive:
+                        appState = @"Active";
+                        break;
+                    case UIApplicationStateBackground:
+                        appState = @"Background";
+                        break;
+                    case UIApplicationStateInactive:
+                        appState = @"Inactive";
+                        break;
+                    default:
+                        break;
+                }
+                NSLog(@"Found cloud record updated while in AppState = %@", appState);
+                // TODO: act on this - redraw screen
+                completionHandler(UIBackgroundFetchResultNewData);
+            } else {
+                completionHandler(UIBackgroundFetchResultNoData);
+            }
+        }];
+    } else {
+        completionHandler(UIBackgroundFetchResultNoData);
+    }
 }
 
  - (void)testLocalNotification

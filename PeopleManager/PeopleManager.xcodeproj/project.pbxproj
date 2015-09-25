@@ -10,6 +10,7 @@
 		0326AC228142EA39FD582F72 /* libPods-PeopleManagerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C18FDC7B9A72ED4620B13E /* libPods-PeopleManagerUITests.a */; };
 		7EA37C1BA3A659D45C01FBB9 /* libPods-PeopleManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EBF9829A671A06E584F345 /* libPods-PeopleManagerTests.a */; };
 		8F1A6AF428EB41E675FFC028 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A5ACC7A6ED91E78990A438 /* libPods.a */; };
+		92E630911BB581F6004A2B54 /* fired.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 92E630901BB581F6004A2B54 /* fired.m4a */; settings = {ASSET_TAGS = (); }; };
 		92EA642F1BB4455D00DE670D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA642E1BB4455D00DE670D /* CoreLocation.framework */; };
 		92EA64331BB4458400DE670D /* HDBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EA64321BB4458400DE670D /* HDBeaconManager.m */; settings = {ASSET_TAGS = (); }; };
 		92EA64361BB4499900DE670D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA64351BB4499900DE670D /* CloudKit.framework */; };
@@ -19,6 +20,10 @@
 		92EA64421BB45D0100DE670D /* Cash Register.caf in Resources */ = {isa = PBXBuildFile; fileRef = 92EA643F1BB45D0100DE670D /* Cash Register.caf */; settings = {ASSET_TAGS = (); }; };
 		92EA64431BB45D0100DE670D /* Rooster.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 92EA64401BB45D0100DE670D /* Rooster.m4a */; settings = {ASSET_TAGS = (); }; };
 		92EA64471BB45D5400DE670D /* HDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EA64461BB45D5400DE670D /* HDConstants.m */; settings = {ASSET_TAGS = (); }; };
+		92EA644A1BB4890E00DE670D /* HDCloudKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EA64491BB4890E00DE670D /* HDCloudKitManager.m */; settings = {ASSET_TAGS = (); }; };
+		92EA644C1BB4A47200DE670D /* floor_plan.png in Resources */ = {isa = PBXBuildFile; fileRef = 92EA644B1BB4A47200DE670D /* floor_plan.png */; settings = {ASSET_TAGS = (); }; };
+		92EA644E1BB4A4BC00DE670D /* MainIPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EA644D1BB4A4BC00DE670D /* MainIPad.storyboard */; settings = {ASSET_TAGS = (); }; };
+		92EA64511BB4A59C00DE670D /* HDMainIPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EA64501BB4A59C00DE670D /* HDMainIPadViewController.m */; settings = {ASSET_TAGS = (); }; };
 		92F50AB51BB4429000199103 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F50AB41BB4429000199103 /* main.m */; };
 		92F50AB81BB4429000199103 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F50AB71BB4429000199103 /* AppDelegate.m */; };
 		92F50AC41BB4429000199103 /* remove-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 92F50AC31BB4429000199103 /* remove-key.sh */; };
@@ -60,6 +65,7 @@
 		78BA88419EED535A18D102B4 /* Pods-PeopleManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleManagerTests/Pods-PeopleManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8BEE5C7AF881EC6190879C55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		918336BD61912027B97A67E7 /* Pods-PeopleManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleManagerUITests/Pods-PeopleManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		92E630901BB581F6004A2B54 /* fired.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fired.m4a; sourceTree = "<group>"; };
 		92EA642E1BB4455D00DE670D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		92EA64311BB4458400DE670D /* HDBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDBeaconManager.h; sourceTree = "<group>"; };
 		92EA64321BB4458400DE670D /* HDBeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDBeaconManager.m; sourceTree = "<group>"; };
@@ -73,6 +79,12 @@
 		92EA64401BB45D0100DE670D /* Rooster.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rooster.m4a; sourceTree = "<group>"; };
 		92EA64451BB45D5400DE670D /* HDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDConstants.h; sourceTree = "<group>"; };
 		92EA64461BB45D5400DE670D /* HDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDConstants.m; sourceTree = "<group>"; };
+		92EA64481BB4890E00DE670D /* HDCloudKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDCloudKitManager.h; sourceTree = "<group>"; };
+		92EA64491BB4890E00DE670D /* HDCloudKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDCloudKitManager.m; sourceTree = "<group>"; };
+		92EA644B1BB4A47200DE670D /* floor_plan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floor_plan.png; sourceTree = "<group>"; };
+		92EA644D1BB4A4BC00DE670D /* MainIPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainIPad.storyboard; path = Storyboards/MainIPad.storyboard; sourceTree = "<group>"; };
+		92EA644F1BB4A59C00DE670D /* HDMainIPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDMainIPadViewController.h; sourceTree = "<group>"; };
+		92EA64501BB4A59C00DE670D /* HDMainIPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDMainIPadViewController.m; sourceTree = "<group>"; };
 		92F50AB11BB4429000199103 /* PeopleManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F50AB41BB4429000199103 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92F50AB61BB4429000199103 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -180,6 +192,8 @@
 			children = (
 				92EA64311BB4458400DE670D /* HDBeaconManager.h */,
 				92EA64321BB4458400DE670D /* HDBeaconManager.m */,
+				92EA64481BB4890E00DE670D /* HDCloudKitManager.h */,
+				92EA64491BB4890E00DE670D /* HDCloudKitManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -187,6 +201,7 @@
 		92EA643E1BB45D0100DE670D /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				92E630901BB581F6004A2B54 /* fired.m4a */,
 				92EA643F1BB45D0100DE670D /* Cash Register.caf */,
 				92EA64401BB45D0100DE670D /* Rooster.m4a */,
 			);
@@ -196,6 +211,7 @@
 		92EA64411BB45D0100DE670D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				92EA644B1BB4A47200DE670D /* floor_plan.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -243,6 +259,7 @@
 				92F50AB61BB4429000199103 /* AppDelegate.h */,
 				92F50AB71BB4429000199103 /* AppDelegate.m */,
 				92F50AD11BB4429000199103 /* Main.storyboard */,
+				92EA644D1BB4A4BC00DE670D /* MainIPad.storyboard */,
 				92F50AD41BB4429000199103 /* Assets.xcassets */,
 				92F50AD61BB4429000199103 /* LaunchScreen.storyboard */,
 				92F50AD91BB4429000199103 /* Info.plist */,
@@ -336,6 +353,8 @@
 			children = (
 				92EA64391BB4511900DE670D /* HDMainViewController.h */,
 				92EA643A1BB4511900DE670D /* HDMainViewController.m */,
+				92EA644F1BB4A59C00DE670D /* HDMainIPadViewController.h */,
+				92EA64501BB4A59C00DE670D /* HDMainIPadViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -524,9 +543,12 @@
 				92F50AC41BB4429000199103 /* remove-key.sh in Resources */,
 				92EA64431BB45D0100DE670D /* Rooster.m4a in Resources */,
 				92EA64421BB45D0100DE670D /* Cash Register.caf in Resources */,
+				92E630911BB581F6004A2B54 /* fired.m4a in Resources */,
 				92F50AD81BB4429000199103 /* LaunchScreen.storyboard in Resources */,
 				92F50AD51BB4429000199103 /* Assets.xcassets in Resources */,
+				92EA644E1BB4A4BC00DE670D /* MainIPad.storyboard in Resources */,
 				92F50AD31BB4429000199103 /* Main.storyboard in Resources */,
+				92EA644C1BB4A47200DE670D /* floor_plan.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,7 +705,9 @@
 				92EA64471BB45D5400DE670D /* HDConstants.m in Sources */,
 				92EA643B1BB4511900DE670D /* HDMainViewController.m in Sources */,
 				92EA64331BB4458400DE670D /* HDBeaconManager.m in Sources */,
+				92EA644A1BB4890E00DE670D /* HDCloudKitManager.m in Sources */,
 				92F50AB51BB4429000199103 /* main.m in Sources */,
+				92EA64511BB4A59C00DE670D /* HDMainIPadViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
