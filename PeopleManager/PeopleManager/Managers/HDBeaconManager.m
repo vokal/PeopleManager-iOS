@@ -17,6 +17,8 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic) GMBLPlaceManager *placeManager;
 @property (nonatomic) GMBLCommunicationManager *communicationManager;
+@property (nonatomic, strong) GMBLVisit *mostRecentEntered;
+@property (nonatomic, strong) GMBLVisit *mostRecentExited;
 
 @end
 
@@ -47,6 +49,16 @@
     return beaconManager;
 }
 
+- (GMBLVisit *)mostRecentBeaconZoneEntered
+{
+    return self.mostRecentEntered;
+}
+
+- (GMBLVisit *)mostRecentExited
+{
+    return self.mostRecentExited;
+}
+
 # pragma mark - Gimbal PlaceManager delegate methods
 
 - (void)placeManager:(GMBLPlaceManager *)manager didBeginVisit:(GMBLVisit *)visit
@@ -65,6 +77,7 @@
     NSLog(@"Entered region : %@", visit.place.name);
     NSLog(@"Notification : %@", note1);
     note1.applicationIconBadgeNumber = 0;
+    self.mostRecentEntered = visit;
 }
 
 - (void)placeManager:(GMBLPlaceManager *)manager didEndVisit:(GMBLVisit *)visit
@@ -86,6 +99,7 @@
     [[UIApplication sharedApplication] presentLocalNotificationNow:note1];
     NSLog(@"Exited region : %@", visit.place.name);
     NSLog(@"Notification : %@", note1);
+    self.mostRecentExited = visit;
     note1.applicationIconBadgeNumber = 0;
 }
 
